@@ -1,0 +1,59 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\codes\\C_coding\\concurrent-memory-pool\\\u8FED\u4EE3\u5668\u8BBE\u8BA1\u6A21\u5F0F\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{47DD3B7F-5377-46BE-9961-A0807B597175}|\u8FED\u4EE3\u5668\u8BBE\u8BA1\u6A21\u5F0F\\\u8FED\u4EE3\u5668\u8BBE\u8BA1\u6A21\u5F0F.vcxproj|D:\\codes\\C_coding\\concurrent-memory-pool\\\u8FED\u4EE3\u5668\u8BBE\u8BA1\u6A21\u5F0F\\\u8FED\u4EE3\u5668\u8BBE\u8BA1\u6A21\u5F0F\\mylist.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{47DD3B7F-5377-46BE-9961-A0807B597175}|\u8FED\u4EE3\u5668\u8BBE\u8BA1\u6A21\u5F0F\\\u8FED\u4EE3\u5668\u8BBE\u8BA1\u6A21\u5F0F.vcxproj|solutionrelative:\u8FED\u4EE3\u5668\u8BBE\u8BA1\u6A21\u5F0F\\mylist.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47DD3B7F-5377-46BE-9961-A0807B597175}|\u8FED\u4EE3\u5668\u8BBE\u8BA1\u6A21\u5F0F\\\u8FED\u4EE3\u5668\u8BBE\u8BA1\u6A21\u5F0F.vcxproj|D:\\codes\\C_coding\\concurrent-memory-pool\\\u8FED\u4EE3\u5668\u8BBE\u8BA1\u6A21\u5F0F\\\u8FED\u4EE3\u5668\u8BBE\u8BA1\u6A21\u5F0F\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{47DD3B7F-5377-46BE-9961-A0807B597175}|\u8FED\u4EE3\u5668\u8BBE\u8BA1\u6A21\u5F0F\\\u8FED\u4EE3\u5668\u8BBE\u8BA1\u6A21\u5F0F.vcxproj|solutionrelative:\u8FED\u4EE3\u5668\u8BBE\u8BA1\u6A21\u5F0F\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "mylist.h",
+              "DocumentMoniker": "D:\\codes\\C_coding\\concurrent-memory-pool\\\u8FED\u4EE3\u5668\u8BBE\u8BA1\u6A21\u5F0F\\\u8FED\u4EE3\u5668\u8BBE\u8BA1\u6A21\u5F0F\\mylist.h",
+              "RelativeDocumentMoniker": "\u8FED\u4EE3\u5668\u8BBE\u8BA1\u6A21\u5F0F\\mylist.h",
+              "ToolTip": "D:\\codes\\C_coding\\concurrent-memory-pool\\\u8FED\u4EE3\u5668\u8BBE\u8BA1\u6A21\u5F0F\\\u8FED\u4EE3\u5668\u8BBE\u8BA1\u6A21\u5F0F\\mylist.h",
+              "RelativeToolTip": "\u8FED\u4EE3\u5668\u8BBE\u8BA1\u6A21\u5F0F\\mylist.h",
+              "ViewState": "AQIAAGgAAAAAAAAAAAAAAGoAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-20T12:27:27.772Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "main.cpp",
+              "DocumentMoniker": "D:\\codes\\C_coding\\concurrent-memory-pool\\\u8FED\u4EE3\u5668\u8BBE\u8BA1\u6A21\u5F0F\\\u8FED\u4EE3\u5668\u8BBE\u8BA1\u6A21\u5F0F\\main.cpp",
+              "RelativeDocumentMoniker": "\u8FED\u4EE3\u5668\u8BBE\u8BA1\u6A21\u5F0F\\main.cpp",
+              "ToolTip": "D:\\codes\\C_coding\\concurrent-memory-pool\\\u8FED\u4EE3\u5668\u8BBE\u8BA1\u6A21\u5F0F\\\u8FED\u4EE3\u5668\u8BBE\u8BA1\u6A21\u5F0F\\main.cpp",
+              "RelativeToolTip": "\u8FED\u4EE3\u5668\u8BBE\u8BA1\u6A21\u5F0F\\main.cpp",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAQwA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-10-20T12:40:47.827Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
