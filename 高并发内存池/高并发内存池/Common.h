@@ -37,3 +37,36 @@ public:
 private:
 	void* _freeList;
 };
+
+class SizeClass
+{
+public:
+	static size_t RoundUp(size_t size)
+	{
+		if (size <= 128)
+		{
+
+		}
+		else if (size <= 1024)
+		{
+
+		}
+		else if (size <= 8 * 1024)
+		{
+
+		}
+		else if (size <= 64 * 1024)
+		{
+
+		}
+		else if (size <= 256 * 1024)
+		{
+
+		}
+		else
+		{
+			assert(false);
+		}
+
+	}
+};
