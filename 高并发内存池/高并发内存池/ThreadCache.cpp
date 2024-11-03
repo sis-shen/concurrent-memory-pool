@@ -1,4 +1,5 @@
 #include "ThreadCache.h"
+#include "CentralCache.h"
 
 void* ThreadCache::Allocate(size_t size)
 {
@@ -23,6 +24,44 @@ void ThreadCache::Deallocate(void* ptr, size_t size)
 
 void* ThreadCache::FetchFromCentralCache(size_t index, size_t aliginsize)
 {
-	//...TODO
+	//慢开始反馈调节法
+	//1.最开始不会一次向central cache要太多，因为要太多了可能用不完
+	//2.需求增加，最多一次取到上限 
+#ifdef _WIN32
+	size_t batchNum = min(_freeLists[index].MaxSize(), SizeClass::NumMoveSize(aliginsize));
+#else
+	size_t batchNum = std::min(_freeLists[index].MaxSize(), SizeClass::NumMoveSize(aliginsize));
+#endif
+	if (_freeLists[index].MaxSize() == batchNum)
+	{
+		_freeLists[index].MaxSize() += 1;
+	}
+
+	void* start = nullptr;
+	void* end = nullptr;
+
+	size_t actualNum = CentralCache::GetInstance()->FetchRangeObj(start, end, batchNum, aliginsize);
+
+	assert(actualNum > 1);
+
+	if (actualNum == 1)
+	{
+		assert(start == end);
+		return start;
+	}
+	else
+	{
+		_freeLists[index].PushRange(NextObj(start), end);
+		return start;
+	}
+
 	return nullptr;
+}
+
+void ThreadCache::ListTooLong(FreeList& list, size_t size)
+{
+	void* start = nullptr;
+	void* end = nullptr;
+	list.PopRange(start, end, list.MaxSize());
+
 }

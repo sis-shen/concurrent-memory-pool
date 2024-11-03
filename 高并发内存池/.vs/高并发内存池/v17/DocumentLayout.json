@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "D:\\codes\\C_coding\\concurrent-memory-pool\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D17CDE81-DE74-422B-9591-261257B76620}|\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60.vcxproj|D:\\codes\\C_coding\\concurrent-memory-pool\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\UnitTest.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D17CDE81-DE74-422B-9591-261257B76620}|\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60.vcxproj|solutionrelative:\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\UnitTest.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D17CDE81-DE74-422B-9591-261257B76620}|\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60.vcxproj|D:\\codes\\C_coding\\concurrent-memory-pool\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\ConcurrentAlloc.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D17CDE81-DE74-422B-9591-261257B76620}|\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60.vcxproj|solutionrelative:\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\ConcurrentAlloc.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{D17CDE81-DE74-422B-9591-261257B76620}|\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60.vcxproj|D:\\codes\\C_coding\\concurrent-memory-pool\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\ThreadCache.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D17CDE81-DE74-422B-9591-261257B76620}|\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60.vcxproj|solutionrelative:\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\ThreadCache.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D17CDE81-DE74-422B-9591-261257B76620}|\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60.vcxproj|D:\\codes\\C_coding\\concurrent-memory-pool\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\Common.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -19,8 +15,28 @@
       "RelativeMoniker": "D:0:0:{D17CDE81-DE74-422B-9591-261257B76620}|\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60.vcxproj|solutionrelative:\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\ThreadCache.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D17CDE81-DE74-422B-9591-261257B76620}|\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60.vcxproj|D:\\codes\\C_coding\\concurrent-memory-pool\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\ThreadCache.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D17CDE81-DE74-422B-9591-261257B76620}|\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60.vcxproj|solutionrelative:\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\ThreadCache.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{D17CDE81-DE74-422B-9591-261257B76620}|\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60.vcxproj|D:\\codes\\C_coding\\concurrent-memory-pool\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\PageCache.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D17CDE81-DE74-422B-9591-261257B76620}|\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60.vcxproj|solutionrelative:\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\PageCache.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D17CDE81-DE74-422B-9591-261257B76620}|\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60.vcxproj|D:\\codes\\C_coding\\concurrent-memory-pool\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\CentralCache.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D17CDE81-DE74-422B-9591-261257B76620}|\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60.vcxproj|solutionrelative:\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\CentralCache.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D17CDE81-DE74-422B-9591-261257B76620}|\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60.vcxproj|D:\\codes\\C_coding\\concurrent-memory-pool\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\PageCache.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D17CDE81-DE74-422B-9591-261257B76620}|\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60.vcxproj|solutionrelative:\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\PageCache.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D17CDE81-DE74-422B-9591-261257B76620}|\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60.vcxproj|D:\\codes\\C_coding\\concurrent-memory-pool\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\UnitTest.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D17CDE81-DE74-422B-9591-261257B76620}|\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60.vcxproj|solutionrelative:\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\UnitTest.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D17CDE81-DE74-422B-9591-261257B76620}|\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60.vcxproj|D:\\codes\\C_coding\\concurrent-memory-pool\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\CentralCache.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D17CDE81-DE74-422B-9591-261257B76620}|\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60.vcxproj|solutionrelative:\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\CentralCache.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D17CDE81-DE74-422B-9591-261257B76620}|\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60.vcxproj|D:\\codes\\C_coding\\concurrent-memory-pool\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\ConcurrentAlloc.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D17CDE81-DE74-422B-9591-261257B76620}|\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60.vcxproj|solutionrelative:\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\ConcurrentAlloc.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D17CDE81-DE74-422B-9591-261257B76620}|\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60.vcxproj|D:\\codes\\C_coding\\concurrent-memory-pool\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\test.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -34,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,72 +58,120 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
+              "Title": "PageCache.cpp",
+              "DocumentMoniker": "D:\\codes\\C_coding\\concurrent-memory-pool\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\PageCache.cpp",
+              "RelativeDocumentMoniker": "\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\PageCache.cpp",
+              "ToolTip": "D:\\codes\\C_coding\\concurrent-memory-pool\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\PageCache.cpp",
+              "RelativeToolTip": "\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\PageCache.cpp",
+              "ViewState": "AQIAABcAAAAAAAAAAIA1wCUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-10-31T07:32:33.562Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PageCache.h",
+              "DocumentMoniker": "D:\\codes\\C_coding\\concurrent-memory-pool\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\PageCache.h",
+              "RelativeDocumentMoniker": "\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\PageCache.h",
+              "ToolTip": "D:\\codes\\C_coding\\concurrent-memory-pool\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\PageCache.h",
+              "RelativeToolTip": "\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\PageCache.h",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAuwAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-31T07:32:26.967Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CentralCache.h",
+              "DocumentMoniker": "D:\\codes\\C_coding\\concurrent-memory-pool\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\CentralCache.h",
+              "RelativeDocumentMoniker": "\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\CentralCache.h",
+              "ToolTip": "D:\\codes\\C_coding\\concurrent-memory-pool\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\CentralCache.h",
+              "RelativeToolTip": "\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\CentralCache.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-30T07:47:31.236Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CentralCache.cpp",
+              "DocumentMoniker": "D:\\codes\\C_coding\\concurrent-memory-pool\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\CentralCache.cpp",
+              "RelativeDocumentMoniker": "\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\CentralCache.cpp",
+              "ToolTip": "D:\\codes\\C_coding\\concurrent-memory-pool\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\CentralCache.cpp",
+              "RelativeToolTip": "\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\CentralCache.cpp",
+              "ViewState": "AQIAACMAAAAAAAAAAIA1wC0AAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-10-30T07:47:10.914Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "ConcurrentAlloc.h",
               "DocumentMoniker": "D:\\codes\\C_coding\\concurrent-memory-pool\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\ConcurrentAlloc.h",
               "RelativeDocumentMoniker": "\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\ConcurrentAlloc.h",
               "ToolTip": "D:\\codes\\C_coding\\concurrent-memory-pool\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\ConcurrentAlloc.h",
               "RelativeToolTip": "\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\ConcurrentAlloc.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAACAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-10-30T06:43:23.867Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-30T06:43:23.867Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "UnitTest.cpp",
               "DocumentMoniker": "D:\\codes\\C_coding\\concurrent-memory-pool\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\UnitTest.cpp",
               "RelativeDocumentMoniker": "\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\UnitTest.cpp",
               "ToolTip": "D:\\codes\\C_coding\\concurrent-memory-pool\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\UnitTest.cpp",
               "RelativeToolTip": "\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\UnitTest.cpp",
-              "ViewState": "AQIAAAoAAAAAAAAAAADwvxMAAAAAAAAA",
+              "ViewState": "AQIAAAgAAAAAAAAAAIA1wAkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-10-30T06:40:40.684Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-30T06:40:40.684Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Common.h",
               "DocumentMoniker": "D:\\codes\\C_coding\\concurrent-memory-pool\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\Common.h",
               "RelativeDocumentMoniker": "\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\Common.h",
               "ToolTip": "D:\\codes\\C_coding\\concurrent-memory-pool\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\Common.h",
               "RelativeToolTip": "\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\Common.h",
-              "ViewState": "AQIAACMAAAAAAAAAAADwvywAAAAeAAAA",
+              "ViewState": "AQIAAE0AAAAAAAAAAAA3wFYAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-10-17T11:03:46.833Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "ThreadCache.cpp",
               "DocumentMoniker": "D:\\codes\\C_coding\\concurrent-memory-pool\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\ThreadCache.cpp",
               "RelativeDocumentMoniker": "\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\ThreadCache.cpp",
               "ToolTip": "D:\\codes\\C_coding\\concurrent-memory-pool\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\ThreadCache.cpp",
               "RelativeToolTip": "\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\ThreadCache.cpp",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABcAAABJAAAA",
+              "ViewState": "AQIAADMAAAAAAAAAAAA3wEEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-10-17T11:03:32.849Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "ThreadCache.h",
               "DocumentMoniker": "D:\\codes\\C_coding\\concurrent-memory-pool\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\ThreadCache.h",
               "RelativeDocumentMoniker": "\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\ThreadCache.h",
               "ToolTip": "D:\\codes\\C_coding\\concurrent-memory-pool\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\ThreadCache.h",
               "RelativeToolTip": "\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\ThreadCache.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwA8AAABAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-10-17T11:01:54.973Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "test.cpp",
               "DocumentMoniker": "D:\\codes\\C_coding\\concurrent-memory-pool\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\test.cpp",
               "RelativeDocumentMoniker": "\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\test.cpp",
@@ -115,8 +179,7 @@
               "RelativeToolTip": "\u9AD8\u5E76\u53D1\u5185\u5B58\u6C60\\test.cpp",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-10-17T10:50:40.68Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-17T10:50:40.68Z"
             }
           ]
         }

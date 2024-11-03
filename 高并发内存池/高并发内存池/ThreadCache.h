@@ -9,6 +9,8 @@ public:
 	void Deallocate(void* ptr, size_t size);
 
 	void* FetchFromCentralCache(size_t index,size_t aliginsize);
+
+	void ListTooLong(FreeList& list, size_t size);
 private:
 	FreeList _freeLists[NFREE_LISTS];
 };

@@ -5,6 +5,14 @@
 #include <time.h>
 #include <cassert>
 #include <thread>
+#include <algorithm>
+#include <mutex>
+
+#ifdef _WIN32
+#include <windows.h>
+#else
+	#include <sys/mman.h>
+#endif
 
 
 using std::cout;
@@ -12,12 +20,30 @@ using std::endl;
 
 static const size_t MAX_BYTES = 256 * 1024;//设置分配的最大的字节
 static const size_t NFREE_LISTS = 208;//设置最大哈希桶的数量
+static const size_t NPAGES = 128;//多少页
+static const size_t PAGE_SHIFT = 13;//一页是2的多少次方
 
 #ifdef _WIN64
 typedef unsigned long long PAGE_ID;
 #elif _WIN32
 typedef size_t PAGE_ID;
 #endif 
+
+
+//直接去堆上按页申请空间
+inline static void* SystemAlloc(size_t kpage)
+{
+#ifdef _WIN32
+	void* ptr = VirtualAlloc(0, kpage << PAGE_SHIFT, MEM_COMMIT | MEM_RESERVE, PAGE_READWRITE);
+#else
+	void* ptr = mmap(0, kpage << PAGE_SHIFT, PORT_READ | PORT_WRITE, MAP_ANONYMOUS, -1, 0);
+#endif
+
+	if (ptr == nullptr)
+		throw std::bad_alloc();
+
+	return ptr;
+}
 
 
 //管理切分好的小对象的自由链表
@@ -38,6 +64,12 @@ public:
 		_freeList = obj;
 	}
 
+	void PushRange(void* start, void* end)
+	{
+		NextObj(end) = _freeList;
+		_freeList = start;
+	}
+
 	void* Pop()
 	{
 		assert(_freeList);
@@ -51,8 +83,14 @@ public:
 	{
 		return _freeList == nullptr;
 	}
+
+	size_t& MaxSize()
+	{
+		return _maxSize;
+	}
 private:
 	void* _freeList = nullptr;
+	size_t _maxSize = 1;
 };
 
 class SizeClass
@@ -91,7 +129,7 @@ public:
 		{
 			assert(false);
 		}
-
+		return 0;
 	}
 	static size_t _Index(size_t bytes, size_t align_shift)
 	{
@@ -130,16 +168,114 @@ public:
 			return 0;
 		}
 	}
+
+	//thread cache一次从中心缓存获取多少个
+	static size_t NumMoveSize(size_t size)
+	{
+		assert(size > 0);
+
+		size_t num = MAX_BYTES / size;
+
+		if (num < 2)
+			num = 2;
+		else if (num > 512)
+			num = 512;
+
+		return num;
+	}
+
+	static size_t NumMovePage(size_t size)
+	{
+		size_t num = NumMoveSize(size);
+		size_t npage = num * size;
+
+		npage >>= PAGE_SHIFT;
+
+		if (npage == 0)//至少拿一页
+			npage = 1;
+
+		return npage;
+	}
+
 };
 
 struct Span
 {
-	PAGE_ID _pageID;//大块内存起始页的页号
-	size_t _n;//页的数量
+public:
+	PAGE_ID _pageID = 0;//大块内存起始页的页号
+	size_t _n = 0;//页的数量
 
-	Span* _next;
-	Span* _prev;
+	Span* _next = nullptr;
+	Span* _prev = nullptr;
 
-	size_t _useCountl;//切好的小块内存的引用计数
-	void* _freeList;//切好的空闲小块内存的自由链表
+	size_t _useCountl = 0;//切好的小块内存的引用计数
+	void* _freeList = nullptr;//切好的空闲小块内存的自由链表
+};
+
+//带头双向循环链表
+class SpanList
+{
+public:
+	SpanList()
+	{
+		_head = new Span;
+		_head->_next = _head;
+		_head->_prev = _head;
+	}
+
+	Span* Begin() 
+	{
+		return _head->_next;
+	}
+
+	Span* End()
+	{
+		return _head;
+	}
+
+	bool Empty()
+	{
+		return _head->_next == _head;
+	}
+
+	Span* PopFront()
+	{
+		Span* front = _head->_next;
+		Erase(front);
+		return front;
+	}
+
+	void PushFront(Span* newSpan)
+	{
+		Insert(_head->_next,newSpan);
+	}
+
+	void Insert(Span* pos, Span* newSpan)
+	{
+		assert(pos);
+		assert(newSpan);
+
+		Span* prev = pos->_prev;;
+		prev->_next = newSpan;
+		newSpan->_prev = prev;
+		newSpan->_next = pos;
+		pos->_prev = newSpan;
+	}
+
+	void Erase(Span* pos)
+	{
+		assert(pos);
+		assert(pos != _head);
+
+		Span* prev = pos->_prev;
+		Span* next = pos->_next;
+
+		prev->_next = next;
+		next->_prev = prev;
+	}
+
+private:
+	Span* _head;
+public:
+	std::mutex _mtx;
 };
