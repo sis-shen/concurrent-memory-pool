@@ -22,12 +22,14 @@ Span* CentralCache::GetOneSpan(SpanList& list, size_t byte_size)
 
 	PageCache::GetInstance()->_pageMtx.lock();
 	Span* span = PageCache::GetInstance()->NewSpan(SizeClass::NumMovePage(byte_size));
+	span->_isUse = true;
+	span->_objSize = byte_size;
 	PageCache::GetInstance()->_pageMtx.unlock();
 
 	//对span进行切分，此时的span是独享的，不需要加锁保护
 
 	char* start = (char*)(span->_pageID << PAGE_SHIFT);
-	size_t bytes = span->_n << PAGE_SHIFT;
+	size_t bytes = (span->_n << PAGE_SHIFT);
 
 	char* end = (char*)start + bytes;
 
@@ -42,6 +44,8 @@ Span* CentralCache::GetOneSpan(SpanList& list, size_t byte_size)
 		tail = start;
 		start += byte_size;
 	}
+
+	NextObj(tail) = nullptr;
 
 	//切好以后要把span挂起来
 	list._mtx.lock();
@@ -70,8 +74,38 @@ size_t CentralCache::FetchRangeObj(void*& start, void*& end, size_t batchNum, si
 		++actualNum;
 	}
 	span->_freeList = NextObj(end);
+	span->_useCount++;
 	NextObj(end) = nullptr;
 	_spanLists[index]._mtx.unlock();
 
 	return actualNum;
+}
+
+void CentralCache::ReleaseListToSpans(void* start, size_t byte_size)
+{
+	size_t index = SizeClass::Index(byte_size);
+	_spanLists[index]._mtx.lock();
+
+	while (start)
+	{
+		void* next = NextObj(start);
+
+		Span* span = PageCache::GetInstance()->MapObjToSpan(start);
+		NextObj(start) = span->_freeList;
+		span->_freeList = start;
+		span->_useCount--;
+		if (span->_useCount == 0)
+		{
+			_spanLists[index].Erase(span);
+			span->_freeList = nullptr;
+			span->_next = nullptr;
+			span->_prev = nullptr;
+			span->_next = nullptr;
+			span->_isUse = false;
+			PageCache::GetInstance()->ReleaseSpanToPageCache(span);     
+		}
+		start = next;
+	}
+
+	_spanLists[index]._mtx.unlock();
 }

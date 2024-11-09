@@ -7,6 +7,7 @@
 #include <thread>
 #include <algorithm>
 #include <mutex>
+#include <unordered_map>
 
 #ifdef _WIN32
 #include <windows.h>
@@ -45,6 +46,16 @@ inline static void* SystemAlloc(size_t kpage)
 	return ptr;
 }
 
+inline static void SystemFree(void* ptr,size_t size)
+{
+#ifdef _WIN32
+	VirtualFree(ptr, 0, MEM_RELEASE);;
+#else
+	//Linux
+	unmmap(ptr, size);
+#endif
+}
+
 
 //管理切分好的小对象的自由链表
 
@@ -62,12 +73,28 @@ public:
 		//头插
 		NextObj(obj) = _freeList;//给obj前一个指针的内存块赋值上地址
 		_freeList = obj;
+		_size++;
 	}
 
-	void PushRange(void* start, void* end)
+	void PopRange(void* &start, void* &end, size_t n)
+	{
+		assert(n >= _size);
+		start = _freeList;
+		end = start;
+		for (size_t i = 0; i < n - 1; ++i)
+		{
+			end = NextObj(end);
+		}
+		_freeList = NextObj(end);
+		NextObj(end) = nullptr;
+		_size -= n;
+	}
+
+	void PushRange(void* start, void* end,size_t n)
 	{
 		NextObj(end) = _freeList;
 		_freeList = start;
+		_size += n;
 	}
 
 	void* Pop()
@@ -76,6 +103,7 @@ public:
 		//头删
 		void* obj = _freeList;
 		_freeList = NextObj(obj);
+		--_size;
 		return obj;
 	}
 
@@ -88,9 +116,15 @@ public:
 	{
 		return _maxSize;
 	}
+
+	size_t& Size()
+	{
+		return _size;
+	}
 private:
 	void* _freeList = nullptr;
 	size_t _maxSize = 1;
+	size_t _size = 0;
 };
 
 class SizeClass
@@ -127,7 +161,7 @@ public:
 		}
 		else
 		{
-			assert(false);
+			return _RoundUp(size, 1 << PAGE_SHIFT);
 		}
 		return 0;
 	}
@@ -208,8 +242,10 @@ public:
 	Span* _next = nullptr;
 	Span* _prev = nullptr;
 
-	size_t _useCountl = 0;//切好的小块内存的引用计数
+	size_t _useCount = 0;//切好的小块内存的引用计数
 	void* _freeList = nullptr;//切好的空闲小块内存的自由链表
+	bool _isUse = false;
+	size_t _objSize = 0;
 };
 
 //带头双向循环链表
